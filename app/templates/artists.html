@@ -26,10 +26,15 @@
         </div>
         <div class="row my-5">
             {% for artist in artists_list%}
-            <div class="col mx-1 h-100 d-flex justify-content-center">
-                <img src="{{url_for('static', filename=artists_list[artist])}}" class="d-block" alt="...">
+            <div class="image col mx-1 d-flex justify-content-center">
+                <img src="{{url_for('static', filename=artists_list[artist])}}" alt="...">
+                <h5 class="overlay">{{artist}}</h5>
             </div>
+            
             {% endfor %}
+        </div>
+        <div class="row text-center">
+            <a href="/">Return to home</a>
         </div>
     </div>
 
